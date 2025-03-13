@@ -1,0 +1,83 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Certificates Container */
+.certificates-container {
+    text-align: center;
+    width: 90%;
+    max-width: 1000px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Title Styling */
+h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.highlight {
+    color: red;
+}
+
+/* Certificates Grid */
+.certificates-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* Individual Certificate Box */
+.certificate {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 30%;
+    min-width: 250px;
+    transition: 0.3s ease-in-out;
+}
+
+.certificate img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* Certificate Text */
+.certificate p {
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Hover Effect */
+.certificate:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .certificates-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .certificate {
+        width: 80%;
+    }
+}

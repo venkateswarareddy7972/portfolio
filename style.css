@@ -1,0 +1,202 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+.main{
+    display: flex;
+    flex-direction: column;
+}
+.protfolio-container{
+    min-height: 100vh;
+    width: 100%;
+    display:  flex;
+    flex-direction: column;
+   
+}
+.navlist{
+    display: flex;
+    gap: 3.5rem;
+    height: 15vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
+.navlist li{
+    list-style: none;
+}
+.navlist li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: #fff;
+    position: relative;
+}
+ .left-container, .right-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.left-container{
+    background: #262525;
+    width: 75%;
+    padding-left: 3rem;
+}
+.right-container{
+    background: linear-gradient(-45deg, #3877ff, #262525 75%);
+    width: 25%;
+    position:absolute;
+    top:0px;
+    right:0px
+}
+.icons .fa-brands{
+    color: #bbb;
+    font-size: 1.7rem;
+}
+.icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+.content{
+    margin-left: 4rem;
+}
+.content .intro{
+    font-size: 1.5rem;
+    color: #fff;
+}
+.content .intro span{
+    color: #5DB9EE;
+}
+.content h1{
+    font-size: 4rem;
+    color: #5DB9EE;
+}
+.content .detail{
+    font-size: 1.1rem;
+    color: #fff;
+    max-width: 38rem;
+    margin: 1.1rem 0 3rem 0;
+    line-height: 1.8rem;
+}
+.btn-container button{
+    border: .1rem solid #5DB9EE;
+    font-size: 1.1rem;
+    padding: .8rem 1.5rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: .5s ease;
+}
+button:nth-child(1){
+    background: #5DB9EE;
+    color: #262525;
+}
+button:nth-child(2){
+    background: transparent;
+    color: #5DB9EE;
+    margin-left: 2rem;
+}
+button:nth-child(1):hover{
+    background: transparent;
+    color: #5DB9EE;
+}
+button:nth-child(2):hover{
+    background: #5DB9EE;
+    color: #262525;
+}
+.icons .fa-brands:hover{
+    cursor: pointer;
+    background: linear-gradient(#fff, #3877ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.design .circle{
+    aspect-ratio: 1;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%); 
+    
+
+}
+.circle:nth-child(1){
+    background: linear-gradient(90deg, transparent 50%, #262525 50%);
+    width: 28rem;
+}
+.circle:nth-child(2){
+    width: 25rem;
+    background-image: url("REDDY.PIC\ 3.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border: .1rem solid  white;
+    box-shadow: 
+    0 0 1rem #fff,
+    inset 0 0 1rem #fff,
+    0 0 2rem #3877ff,
+    inset 0 0 2rem #3877ff,
+    0 0 4rem #3877ff,
+    inset 0 0 4rem #3877ff
+    ;
+}
+.navlist li a::after{
+    content: "";
+    position: absolute;
+    background: #fff;
+    width: 100;
+    height: .1rem;
+    left: 0;
+    bottom: -5px;
+    transform: scale(0);
+    transform-origin: bottom right;
+    transition: trasform .5;
+}
+.navlist li a:hover::after{
+    transform: scale(1);
+    transform-origin: bottom left;
+} 
+/* Make the profile section responsive */
+.profile img {
+    width: 120px;  /* Smaller image for mobile */
+    height: 120px;
+}
+
+/* Adjust buttons for mobile */
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn {
+    width: 90%;
+    text-align: center;
+    margin: 5px 0;
+}
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide by default */
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        background-color: white;
+        width: 200px;
+        padding: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block; /* Show menu icon on mobile */
+        font-size: 25px;
+        cursor: pointer;
+    }
+}
